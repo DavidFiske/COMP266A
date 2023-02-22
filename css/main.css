@@ -1,0 +1,754 @@
+/*				Website designed for COMP266 at Athabasca University
+ * Filename:	main.css
+ * Purpose:		Cascading Stylesheet for the website.
+ *
+ * @author:		David Fiske
+ * Date:		Oct 30, 2017
+ * Version:		1.5
+ *******************************************************************/
+
+/* Global Values
+ ***************/
+* {
+	font-family: Tahoma, "Times New Roman", Georgia, Serif;
+}
+
+html, 
+body {
+	height: 100%;
+	margin: 0;
+}
+
+/* Responsive page width
+ * Based on: http://www.w3schools.com/css/css_rwd_grid.asp
+ * Use standard column grid to keep page width responsive.
+ *********************************************************/
+[class*="col-"] {
+	float: none;
+	padding: 0;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/* Dynamic Footer 
+ * Based on: https://css-tricks.com/couple-takes-sticky-footer
+ * Keep footer at bottom of page.
+ *************************************************************/
+.wrapper {
+	background-color :#333;
+	border: 3px solid #333;
+	box-sizing: border-box;
+	min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+	margin-bottom: -31px;
+}
+
+.footer, 
+.push {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	background-color :#ffffff;
+	color: #000000;
+	display: inline-block;
+	font-weight: bold;
+	float: left;
+	text-align: center;
+	text-decoration: none;
+	line-height: 25px;
+	font-size: 1.0vmax;
+	box-sizing: border-box;
+}
+
+.footer {
+	border: 3px solid #333;
+}
+
+/* Miscellaneous
+ * Headings, paragraphs, classes and IDs.
+ ****************************************/
+h1 {
+	padding: 0;
+	margin: 0;
+	font-weight: bold;
+	font-size: 4.0vmax;
+}
+
+h3 {
+	padding-top: 16px;
+	margin: 0;
+	font-weight: bold;
+	font-size: 4.0vmin;
+}
+
+h4 {
+	padding-bottom: 16px;
+	margin: 0;
+	font-weight: bold;
+	font-size: 3.0vmax;
+}
+
+h5 {
+	padding-top: 16px;
+	margin: 0;
+	font-weight: bold;
+	font-size: 1.9vmax;
+}
+
+p {
+	font-weight: bold;
+	font-size: 1.0vmax;
+}
+
+#skills {
+	font-weight: bold;
+	font-size: 2.0vmin;
+}
+
+#img {
+	text-align: left;
+}
+
+#img_green {
+	color: #009d0e;
+	font-size: 2.0vmin;
+	text-align: left;
+}
+
+#img_green2 {
+	font-size: 1.4vmax;
+	text-align: left;
+	font-weight: normal;
+}
+
+.img1 {
+	float: left;
+}
+
+.img2 {
+	float: right;
+	background-color: #9fc5f8;
+}
+
+/* Style for Form Validation (contactFormValidation)
+ * Error message text for contact form.
+ ****************************************************/
+#google_translate_element {
+	display: inline-block;
+	float: left;
+}
+
+.google_translate_element {
+	padding: 0;
+	margin-bottom: -23px;
+	overflow: hidden;
+	background-color :#ffffff;
+	display: inline-block;
+	float: left;
+	text-align: right;
+	line-height: 25px;
+	box-sizing: border-box;
+}
+
+.footer2 {
+	padding: 0;
+	overflow: hidden;
+	background-color :#ffffff;
+	display: inline-block;
+	float: left;
+	text-align: center;
+	line-height: 25px;
+	box-sizing: border-box;
+}
+
+/* Style for Google Translate
+ * https://translate.google.com/manager/website
+ **********************************************/
+
+#google_translate_element {
+	display: inline-block;
+	font-weight: bold;
+	font-size: 1.4vmax;
+	padding-bottom: 1%;
+}
+
+/* Style for JS Photo Gallery (simpleImageGallery.js)
+ * Display photos of websites.
+ ****************************************************/
+.gallery_img {
+	text-align: center;
+	width: 100%;
+	padding: 0;
+}
+
+img.gallery_img {
+    width: 61%;
+	border: 3px solid #333;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+#gallery_html {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+#gallery_html li {
+	list-style-type: none;
+	margin: 1% 0 1% 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #ffffff;
+	color: #9fc5f8;
+	display: inline-block;
+	font-weight: bold;
+	float: none;
+	text-align: center;
+	text-decoration: none;
+	width: 61%;
+	line-height: 81px;
+	font-size: 2.0vmax;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+#gallery_html li a {
+	list-style-type: none;
+	cursor: pointer;
+	background-color: #ea9999;
+	color: #000000;
+	display: inline-block;
+	font-weight: bold;
+	float: none;
+	text-align: center;
+	text-decoration: none;
+	width: 100%;
+	line-height: 75px;
+	font-size: 2.0vmax;
+	border: 3px solid #333;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+#gallery_html li a:hover:not(.active) {
+	background-color: #333;
+	border: 3px solid #ea9999;
+	color: #ffffff;
+}
+
+/* Dynamic Center
+ * Based on: https://css-tricks.com/centering-in-the-unknown
+ * Keep elements centered in the content area.
+ ***********************************************************/
+.block {
+	text-align: center;
+	background: #333;
+	margin: 0;
+	height: 600px;
+}
+
+.block:before {
+  content: '';
+  margin-left: -0.25em; 
+  display: inline-block;
+  height: 100%; 
+  vertical-align: middle;
+}
+
+.experience {
+	text-align: center;
+	background: #333;
+	margin-top: 0;
+	margin-left: 8.33%;
+	margin-right: 8.33%;
+	height: 700px;
+}
+
+.experience:before {
+	content: '';
+	margin-left: -0.25em; 
+	display: inline-block;
+	height: 100%; 
+	vertical-align: middle;
+}
+
+ .education {
+	text-align: center;
+	background: #ffffff;
+	margin-top: 0;
+	margin-left: 8.33%;
+	margin-right: 8.33%;
+	height: 600px;
+}
+
+.education:before {
+	content: '';
+	margin-left: -0.25em; 
+	display: inline-block;
+	height: 100%; 
+	vertical-align: middle;
+}
+
+.skills {
+	text-align: left;
+	background: #333;
+	margin-top: 16px;
+	margin-left: 30.00%;
+	height: 580px;
+}
+ 
+.skills:before {
+	content: '';
+	margin-left: -0.25em; 
+	display: inline-block;
+	height: 100%; 
+	vertical-align: middle;
+}
+ 
+ .portfolio {
+	text-align: center;
+	background: #ffffff;
+	margin-top: 0;
+	margin-left: 16.66%;
+	margin-right: 16.66%;
+	height: 600px;
+}
+
+.portfolio:before {
+	content: '';
+	margin-left: -0.25em; 
+	display: inline-block;
+	height: 100%; 
+	vertical-align: middle;
+}
+ 
+.portfolio li {
+	padding-bottom: 25px;
+}
+
+ .contact {
+	text-align: center;
+	background: #ffffff;
+	margin-top: 16px;
+	margin-left: 16.66%;
+	margin-right: 16.66%;
+	height: 580px;
+}
+
+.contact:before {
+	content: '';
+	margin-left: -0.25em; 
+	display: inline-block;
+	height: 100%; 
+	vertical-align: middle;
+}
+ 
+ .software_development {
+	text-align: center;
+	background: #ffffff;
+	margin-top: 0;
+	margin-left: 16.66%;
+	margin-right: 16.66%;
+	height: 600px;
+}
+
+.software_development:before {
+	content: '';
+	margin-left: -0.25em; 
+	display: inline-block;
+	height: 100%; 
+	vertical-align: middle;
+}
+
+ .web_development {
+	text-align: center;
+	background: #ffffff;
+	margin-top: 0;
+	margin-left: 8.33%;
+	margin-right: 8.33%;
+	height: 600px;
+}
+
+.web_development:before {
+	content: '';
+	margin-left: -0.25em; 
+	display: inline-block;
+	height: 100%; 
+	vertical-align: middle;
+}
+
+.centered {
+	display: inline-block;
+	vertical-align: middle;
+	width: 95%;
+	padding: 0;
+	background: #333;
+	color: #ffffff;
+}
+
+.sample {
+	text-align: center;
+	background: #333;
+	margin-top: 0;
+	margin-left: 16.66%;
+	margin-right: 16.66%;
+	height: 600px;
+}
+
+.sample:before {
+	content: '';
+	margin-left: -0.25em; 
+	display: inline-block;
+	height: 100%; 
+	vertical-align: middle;
+}
+
+/* Background Colours
+ * Keep background colours uniform.
+ * Add id to wrapper/centered/block/etc class to set background.
+ ***************************************************************/
+#contact,
+#education,
+#experience,
+#portfolio,
+#skills {
+	background: #ffffff;
+	color: #000000;
+}
+
+#confirmation,
+#sample,
+#software_development,
+#web_development {
+	background: #9fc5f8;
+	color: #000000;
+}
+
+/* Top-Nav
+ * Based on: http://www.w3schools.com/css/css_navbar.asp
+ * Dynamic navigation bar at the top of every page.
+ **************************************************/
+ul.topnav {
+	list-style-type: none;
+	margin: 0 0 25px 0;
+	padding: 0;
+	overflow: hidden;
+	border-bottom: 3px solid #333;
+	box-sizing: border-box;
+}
+
+ul.topnav li {
+	float: none; 
+}
+
+ul.topnav li a {
+	padding: 0;
+	background-color :#ffffff;
+	color: #000000;
+	display: inline-block;
+	font-weight: bold;
+	float: left;
+	text-align: center;
+	text-decoration: none;
+	width: 16.66%;
+	line-height: 100px;
+	font-size: 2.0vmax;
+	border: 3px solid #333;
+	margin: -3px;
+	white-space: nowrap;
+}
+
+ul.topnav li a:hover:not(.active) {
+	background-color: #ea9999;
+}
+
+ul.topnav li a.active {
+	background-color: #9fc5f8;
+}
+
+/* Mid-Nav
+ * Keep the content-area navigation links uniform.
+ *************************************************/
+ul.midnav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+ul.midnav li {
+	float: none; 
+}
+
+ul.midnav li a {
+	padding-bottom: 0;
+	background-color: #ea9999;
+	color: #000000;
+	display: inline-block;
+	font-weight: bold;
+	float: none;
+	text-align: center;
+	text-decoration: none;
+	width: 100%;
+	line-height: 150px;
+	font-size: 4.0vmax;
+	border: 3px solid #333;
+	box-sizing: border-box;
+}
+
+ul.midnav li a:hover:not(.active) {
+	background-color: #333;
+	border: 3px solid #ea9999;
+	color: #ffffff;
+}
+
+.button {
+	margin: 0 0.5% 0 0.5%;
+	padding: 0;
+	cursor: pointer;
+	overflow: hidden;
+	background-color: #ea9999;
+	color: #000000;
+	display: inline-block;
+	font-weight: bold;
+	float: none;
+	text-align: center;
+	text-decoration: none;
+	width: 29.75%;
+	height: 75px;
+	font-size: 2.0vmax;
+	border: 3px solid #333;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.button:hover:not(.active) {
+	background-color: #333;
+	border: 3px solid #ea9999;
+	color: #ffffff;
+}
+
+#software_development ul.midnav li a {
+	line-height: 50px;
+	font-size: 2.0vmax;
+	border-radius: 4px;
+}
+
+#software_development ul.midnav li {
+	background-color: #ffffff;
+	color: #9fc5f8;
+	display: inline-block;
+	font-weight: bold;
+	float: none;
+	text-align: center;
+	text-decoration: none;
+	width: 100%;
+	line-height: 50px;
+	font-size: 2.0vmax;
+	margin-bottom: 15px;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+/* Tables
+ ********/
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	text-align: left;
+	vertical-align: top;
+	padding: 0px;
+	font-size: 2.0vmax;
+}
+
+.experience th, .experience td {    
+	font-size: 1.4vmax;
+}
+
+#td2 {    
+	color: #9fc5f8;
+	font-weight: bold;
+	font-size: 1.4vmax;
+}
+
+/* Display-size modifications
+ * Based on: http://www.w3schools.com/css/css3_mediaqueries.asp
+ * Change the way things look when screen width is under 768px. 
+ **************************************************************/
+@media screen and (max-width: 768px){
+
+	ul.topnav li {
+		float: none;
+	}
+
+	ul.topnav li a {
+		width: 100%; 
+		font-size: 4.0vmax;
+		line-height: 75px;
+	}
+
+	ul.midnav li a {
+		width: 100%; 
+		font-size: 4.0vmin;
+		line-height: 75px;
+	}
+
+    .footer {
+        font-size: 2.0vmin;
+    }
+
+    h1 {
+        font-size: 4.0vmin;
+    }
+
+    h4 {
+        font-size: 3.0vmin;
+    }
+
+    h5 {
+        font-size: 1.9vmin;
+    }
+
+    p {
+        font-size: 2.0vmin;
+    }
+
+    #float_img {
+        font-size: 1.4vmin;
+    }
+
+#errorMessage {
+	font-size: 3.0vmin;
+
+}
+
+    .block,
+    .education,
+    .portfolio {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        height: 300px;
+    }
+
+    .contact {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        height: 500px;
+    }
+
+	.sample, 
+	.experience {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        height: 400px;
+    }
+
+	.skills {
+	    margin-top: 0;
+		height: 500px;
+	}
+
+	.web_development {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        height: 500px;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+        font-size: 2.0vmin;
+    }
+
+	/* Google Translate is not available for mobile 
+	 * Modify footer to prevent user from seeing it
+	 **********************************************/
+	.footer2 {
+		float: none;
+		margin-bottom: -31px;
+	}
+
+	.google_translate_element {
+		float: none;
+		margin-bottom: -100px;
+	}
+}
+
+/* Forms
+ * Syntax learned from: http://www.w3schools.com/css/css_form.asp
+ ****************************************************************/
+input[type=text], select {
+	width: 100%;
+    padding: 0 16px;
+    margin-bottom: 16px;
+    display: inline-block;
+    border: 3px solid #333;
+    border-radius: 4px;
+    background-color: #9fc5f8;
+	height: 50px;
+    font-size: 2.5vmin;
+    box-sizing: border-box;
+	overflow: hidden
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 4px 16px;
+    border: 3px solid #333;
+    border-radius: 4px;
+    background-color: #9fc5f8;
+    font-size: 2.5vmin;
+    resize: none;
+    box-sizing: border-box;
+	overflow: hidden
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #ea9999;
+    color: 000000;
+    padding: 0;
+    margin-bottom: 16px;
+    border: 3px solid #333;
+    border-radius: 4px;
+    font-weight: bold;
+    height: 50px;
+    font-size: 2.5vmin;
+    cursor: pointer;
+	overflow: hidden
+}
+
+input[type=text]:focus, 
+textarea:focus {
+	border: 3px solid #009d0e;
+}
+
+input[type=submit]:hover:not(.active) {
+	background-color: #333;
+	border: 3px solid #ea9999;
+	color: #ffffff;
+}
